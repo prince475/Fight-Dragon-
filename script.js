@@ -1,3 +1,4 @@
+// Declaring variables (changable)
 let xp = 0;
 let health = 100;
 let gold = 50;
@@ -6,6 +7,7 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+// Declaring unchanging variables (can be a good way to detect errors)
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -16,6 +18,8 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+
+// Creating an array of objects for our game
 const weapons = [
   { name: 'stick', power: 5 },
   { name: 'dagger', power: 30 },
@@ -49,6 +53,10 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+// Creating our program functions
+
+// The update function used to hold our data, and update the progrma with changing data as actions change.
+
 function update(location) {
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
@@ -58,6 +66,8 @@ function update(location) {
   button3.onclick = location["button functions"][2];
   text.innerText = location.text;
 }
+
+// Using update as a call back function to update changes during user interactions with the app
 
 function goTown() {
   update(locations[0]);
@@ -74,6 +84,8 @@ function goCave() {
 function fightDragon() {
   console.log("Fighting dragon.");
 }
+
+// Purchasing Functions [weapon and Health]
 
 function buyHealth() {
   if (gold >= 10) {
@@ -106,6 +118,8 @@ function buyWeapon() {
   }
 }
 
+// Selling Function
+
 function sellWeapon() {
   if (inventory.length > 1) {
     gold += 15;
@@ -113,6 +127,8 @@ function sellWeapon() {
 
   }
 }
+
+// Fighting Functions
 
 function fightSlime() {
 
