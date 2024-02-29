@@ -176,3 +176,13 @@ function fightDragon() {
 function goFight() {
   
 }
+
+// Adding the fighting techniques function
+
+function attack() {
+
+}
+
+function dodge() {
+
+}
