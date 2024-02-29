@@ -180,7 +180,8 @@ function fightDragon() {
 // Creating our goFight function to hold our fighting logic. 
 
 function goFight() {
-  
+  update(locations[3]);
+  monsterHealth = monsters[fighting].health;
 }
 
 // Adding the fighting techniques function
