@@ -162,3 +162,14 @@ function fightSlime() {
 function fightBeast() {
 
 }
+
+function fightDragon() {
+  
+}
+
+// Fighting each type of monster will use similar logic.
+// Creating our goFight function to hold our fighting logic. 
+
+function goFight() {
+  
+}
