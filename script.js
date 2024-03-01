@@ -188,6 +188,7 @@ function goFight() {
 }
 
 // Adding the fighting techniques function
+// The attack function
 
 function attack() {
    text.innerText = "The " + monsters[fighting].name + " attacks.";
@@ -204,5 +205,13 @@ function attack() {
 }
 
 function dodge() {
+
+}
+
+function defeatMonster() {
+
+}
+
+function lose() {
 
 }
