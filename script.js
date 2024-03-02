@@ -91,6 +91,7 @@ button3.onclick = fightDragon;
 // The update function used to hold our data, and update the progrma with changing data as actions change.
 
 function update(location) {
+  monsterStats.style.display = "none";
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
   button3.innerText = location["button text"][2];
@@ -223,5 +224,5 @@ function defeatMonster() {
 }
 
 function lose() {
-
+    update(locations[5]);
 }
