@@ -127,10 +127,6 @@ function goCave() {
   update(locations[2]);
 }
 
-function fightDragon() {
-  console.log("Fighting dragon.");
-}
-
 // Purchasing Functions [weapon and Health]
 
 function buyHealth() {
@@ -219,7 +215,11 @@ function attack() {
    if (health <= 0) {
      lose();
    } else if (monsterHealth <= 0) {
-     defeatMonster();
+       if  (fighting === 2) {
+         winGame();
+       } else {
+         defeatMonster();
+       }
    }
 }
 
@@ -238,6 +238,11 @@ function defeatMonster() {
 // Lose function
 function lose() {
     update(locations[5]);
+}
+
+// Win game function
+function winGame() {
+  update(locations[6]);
 }
 
 // Game restart function
