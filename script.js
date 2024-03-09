@@ -231,6 +231,7 @@ function attack() {
    }
    if (Math.random() <= .1) {
     text.innerText += " Your " + inventory.pop() + " breaks."
+    currentWeapon--;
   }
 }
 
@@ -277,3 +278,31 @@ function restart() {
    xpText.innerText = xp;
    goTown()
 }
+
+// Adding Easteregg function
+function easterEgg() {
+  update(locations[7]);
+}
+
+function pickTwo() {
+  pick(2);
+}
+
+function pickEight() {
+  pick(8);
+}
+
+// The pick and guess function
+function pick(guess) {
+  const numbers = [];
+  while (numbers.length < 10) {
+    numbers.push(Math.floor(Math.random() * 11));
+  }
+  text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
+  for (let i = 0; i < 10; i++) {
+    text.innerText += numbers[i] + "\n";
+  }
+  if (numbers.includes(guess)) {
+  }
+}
+
